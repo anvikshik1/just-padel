@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans:ital,wght@0,200;0,300;0,500;1,400&family=Poppins:wght@100;200;300;400;500;600&display=swap');
+:root {
+    --alumni-family: 'Alumni Sans', sans-serif;
+    --poppins-family: 'Poppins', sans-serif;
+}
+.footer-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFFBF1;
+}
+.inner-footer{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 100px;
+}
+.inner-footer .footer-details{
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    height:320px;
+    padding-left: 50px;
+}
+.PadelFooter{
+    width: 110px;
+}
+.JustPadelName{
+    width: 170px;
+    margin-top: 15px;
+}
+.social-icons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.social-circle{
+    border:2px solid rgb(192, 192, 192);
+    margin: 15px 5px 5px 0 ;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.circleIcon{
+   font-size: 18px;
+}
+.relate-link {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+.relate-link h1{
+    font-family: var(--alumni-family);
+    font-weight: 700;
+    font-size: 40px;
+    color: #232240;
+    margin: 0;
+    text-transform: uppercase;
+}
+.child-link-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+}
+.child-link-container .child-link{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.child-link-container .child-link h5{
+    margin: 20px 0 0 20px;
+    font-family: var(--poppins-family);
+    font-weight: 400;
+    font-size: 17px;
+    text-align: left;
+}
+.footer-info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+.child-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+}
+.info-icons{
+    border:2px solid rgb(231, 231, 231);
+    margin: 15px 5px 5px 0 ;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.infoIcon{
+    color: #FDAE00;
+}
+.info-contact{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.child-info h5{
+    margin: 20px 0 0 12px;
+    font-family: var(--poppins-family);
+    font-weight: 300;
+    font-size: 15px;
+    text-align: left;
+    max-width: 300px;
+}
+.info-contact{
+    margin-top: 20px;
+}
+.child-info h4{
+    margin: 0px 0 0 15px;
+    font-family: var(--poppins-family);
+    font-weight:300;
+    font-size: 15px;
+    text-align: left;
+    max-width: 300px;
+}
+.footer-Line{
+    width: 98%;
+    color: #ccc;
+    height: 1px;
+    background-color: #ccc;
+    border: 0;
+}
+.cpyright-container{
+    width: 97%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    padding-bottom: 30px;
+}
+.cpyright-container div{
+    width: 100%;
+}
+.inner-cpy-right{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.inner-cpy-right h5{
+    font-family: var(--poppins-family);
+    font-weight: 400;
+    font-size: 14px;
+    color: #ccc;
+}
+.conditions{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    align-items: center;
+}
+.conditions h4{
+    margin: 0;
+    font-family: var(--poppins-family);
+    font-weight: 300;
+    font-size: 13px;
+    margin-right: 40px;
+}
+.conditions img{
+    width: 150px;
+}
+.stores{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: flex-start;
+}
+.stores img{
+ margin-right: 10px;
+ margin-top: 20px;
+}

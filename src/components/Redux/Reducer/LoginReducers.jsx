@@ -1,60 +1,24 @@
-import { environment } from '../../../env';
-import axios from 'axios';
-
 const initial = {
-    LoggedUser: [],
+    loggedUserDetails: [],
     logged: false
 }
-const loginUrl = `${environment.baseUrl}api/user/login/`;
 
-const LoginReducer = (log = initial, action) => {
+const LoginReducers = (log = initial, action) => {
     switch (action.type) {
-
         case "LOGIN":
-            let AdminCredentials = {
-                email: action.payload.email,
-                password: action.payload.password
-            }
-            const loginResult = axios.post(loginUrl, AdminCredentials)
-                .then((response) => {
-                    if (response.data.status === 201 || 200) {
-                        return {
-                            // ...log,
-                            LoggedUser:[
-                                // ...log.LoggedUser,
-                                {
-                                    userId: response.data.userid,
-                                    username: response.data.username,
-                                    email: action.payload.email,
-                                    accessToken: response.data.access,
-                                    userRole:response.data.role
-                                }
-                            ]
-                        }
-                    } else {
-                        console.log("Error While Logging")
-                    }
-                })
-                .catch((error)=>{
-                    console.log("Error : "+error)
-                })
-
-
-        // if (loggedUserData) {
-        //     return {
-        //         ...log,
-        //         logged: true,
-        //     }
-        // } else {
-        //     return {
-        //         ...log,
-        //         logged: false
-        //     }
-        // }
-        case "LOGOUT":
+            const { refreshToken, userRole, userId, userName } = action.payload;
             return {
                 ...log,
-                logged: false
+                loggedUserDetails: [
+                    ...log.loggedUserDetails,
+                    {
+                        userId: userId,
+                        username: userName,
+                        token: refreshToken,
+                        role: userRole
+                    }
+                ],
+                logged:true
             }
         default:
             return log;
@@ -62,4 +26,4 @@ const LoginReducer = (log = initial, action) => {
 
 }
 
-export default LoginReducer;
+export default LoginReducers;

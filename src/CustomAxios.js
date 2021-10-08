@@ -1,28 +1,28 @@
 import axios from 'axios';
 import { environment } from './env';
+import store from './store';
 
 const customAxios = axios.create({
     baseURL: `${environment.baseUrl}`,
 });
 
 const requestHandler = request => {
-    const userToken = localStorage.getItem('Token');
+    // const userToken = localStorage.getItem('Token');
+    const state = store.getState();
+    const userToken = state.LoginReducers.loggedUserDetails[0].token;
     request.headers.Authorization = `Bearer ${userToken}`;
     return request;
 };
 
 const responseHandler = response => {
-
-    console.log("api Response: ");
     if (response.status === 401) {
-        // window.location.href = '/login';
+        window.location.href = '/';
     }
     return response;
 };
 
 const errorHandler = error => {
-    console.log("api error: ", error);
-    // window.location.href = '/';
+    window.location.href = '/';
     return Promise.reject(error);
 };
 

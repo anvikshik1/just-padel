@@ -1,9 +1,10 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './navbar.css'
 import { Link } from 'react-router-dom'
-import Logo from '../images/Just-Padel-Logo.png'
+import Logo from '../images/Just-Padel-Logo.png';
 
 function Navbar() {
+
     return (
         <div>
             <div className="nav-components">

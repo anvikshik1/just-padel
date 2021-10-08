@@ -1,9 +1,11 @@
-export const loginUser = (email, password) => {
+export const loginUser = (token, role, id, username) => {
     return {
         type: "LOGIN",
         payload: {
-            email: email,
-            password: password
+            refreshToken: token,
+            userRole: role,
+            userId: id,
+            userName: username,
         }
     }
 }
